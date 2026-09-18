@@ -1,0 +1,14 @@
+const jsonLd = document.createElement('script');
+jsonLd.type = 'application/ld+json';
+jsonLd.textContent = JSON.stringify({
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Akroil International Pvt Ltd",
+  "url": "https://akroilevents.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+});
+document.head.appendChild(jsonLd);
